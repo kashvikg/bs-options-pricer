@@ -56,6 +56,7 @@ call delta = 0.6368
 put delta = -0.3632
 
 Also tests put-call parity, greek sign checks, and bad input handling.
+<img width="1900" height="1410" alt="image" src="https://github.com/user-attachments/assets/b38a5d27-9c35-4a85-8cb7-23e424b405b5" />
 
 To add later:
 dividends
