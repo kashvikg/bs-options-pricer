@@ -50,13 +50,8 @@ python -m unittest discover -s tests -v
 
 Checked against a known benchmark (S=100, K=100, T=1, r=5%, sigma=20%):
 
-call = 10.4506
-put = 5.5735
-call delta = 0.6368
-put delta = -0.3632
-
 Also tests put-call parity, greek sign checks, and bad input handling.
-<img width="1900" height="1410" alt="image" src="https://github.com/user-attachments/assets/b38a5d27-9c35-4a85-8cb7-23e424b405b5" />
+<img width="900" height="687" alt="image" src="https://github.com/user-attachments/assets/620d74d8-32e7-4bc0-ab0f-8f90a9a95c0d" />
 
 To add later:
 dividends
