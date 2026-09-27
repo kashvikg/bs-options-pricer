@@ -1,9 +1,9 @@
 Black-Scholes Options Pricer
 Python project that prices European call and put options using the Black-Scholes formula and calculates the Greeks (delta, gamma, vega, theta, rho).
 
-Only works for European options with no dividends. Built this for fun while learning about options in one of my classes.
+Only works for European options with no dividends. Built this for fun while learning about options.
 
-Files
+**Files**
 pricing.py - the call/put pricing formulas
 
 greeks.py - delta, gamma, vega, theta, rho
@@ -20,7 +20,7 @@ main.py - command line version
 
 tests/test_bs_pricer.py - unit tests
 
-The formulas
+**The formulas**
 Call: C = S * N(d1) - K * e^(-rT) * N(d2)
 
 Put: P = K * e^(-rT) * N(-d2) - S * N(-d1)
@@ -32,40 +32,31 @@ S = spot price, K = strike, T = years to expiry, r = risk free rate, sigma = vol
 
 Assumptions: European exercise only, no dividends, constant volatility and rate, no transaction costs.
 
-Setup
-text
+**Setup**
 pip install -r requirements.txt
-Run it
-text
+
+**Run it**
 python main.py --S 100 --K 100 --T 1 --r 0.05 --sigma 0.20 --type call
-Both call and put + parity check:
-
-text
+**Both call and put + parity check:**
 python main.py --S 100 --K 100 --T 1 --r 0.05 --sigma 0.20 --both
-Implied vol:
-
-text
+**Implied vol:**
 python main.py --iv --market_price 10.4506 --S 100 --K 100 --T 1 --r 0.05 --type call
-Web page version:
-
-text
+**Web page version:**
 streamlit run app.py
-Tests
-text
+
+**Tests**
 python -m unittest discover -s tests -v
+
+
 Checked against a known benchmark (S=100, K=100, T=1, r=5%, sigma=20%):
 
 call = 10.4506
-
 put = 5.5735
-
 call delta = 0.6368
-
 put delta = -0.3632
 
 Also tests put-call parity, greek sign checks, and bad input handling.
 
-To add later
+To add later:
 dividends
-
 American options
